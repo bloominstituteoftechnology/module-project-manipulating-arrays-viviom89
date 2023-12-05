@@ -67,9 +67,21 @@
     // 🧠 Examples of usage:
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
-    function sumNumsWhile() {
-
-    }
+    function sumNumsWhile(nums) {
+      let result = 0
+      let idx = 0
+      while (idx < nums.length) {
+        let elem = nums[idx]
+        if (typeof elem === 'number') {
+          if (elem === 13) {
+            return "I'm too superstitious!"
+          }
+          result += elem
+        }
+        idx++
+      }
+      return result
+    };
 
     // 👉 CHALLENGE 4
     // 🧠 The function fightMonsters takes an integer (lifePoints) as its argument, and returns a string.
